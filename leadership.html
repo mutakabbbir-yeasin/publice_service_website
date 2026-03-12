@@ -15,111 +15,166 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <!-- TOP BAR SECTION -->
-    <div class="top-bar">
-      <div class="top-left">
-        <a href="#" class="tcbc-btn">TCBC Foundation</a>
+    <!-- TOP BAR START -->
+<div class="top-bar py-2" style="background:#0ca745;">
+  <div class="container">
+    <div class="row align-items-center gy-2">
 
-        <div class="gov-dropdown">
-          <a href="#">Government Office ▾</a>
-          <div class="gov-menu">
-            <a href="#">Office 1</a>
-            <a href="#">Office 2</a>
-            <a href="#">Office 3</a>
+      <!-- Left Side -->
+      <div class="col-12 col-md-6 d-flex flex-wrap align-items-center gap-3 justify-content-center justify-content-md-start">
+
+        <a href="#" class="btn btn-warning btn-sm fw-bold">
+          TCBC Foundation
+        </a>
+
+        <!-- Government Dropdown -->
+        <div class="dropdown">
+          <a class="text-white text-decoration-none dropdown-toggle" href="#" data-bs-toggle="dropdown">
+            Government Office
+          </a>
+
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Office 1</a></li>
+            <li><a class="dropdown-item" href="#">Office 2</a></li>
+            <li><a class="dropdown-item" href="#">Office 3</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Right Side -->
+      <div class="col-12 col-md-6">
+
+        <div class="d-flex flex-wrap align-items-center gap-2 justify-content-center justify-content-md-end">
+
+          <input type="text" class="form-control form-control-sm w-auto" placeholder="Search..." />
+
+          <button class="btn btn-sm btn-outline-light">
+            Search
+          </button>
+
+          <div class="text-white">
+            <a href="#" class="text-white text-decoration-none">বাংলা</a> |
+            <a href="#" class="text-white text-decoration-none">English</a>
           </div>
+
         </div>
+
       </div>
 
-      <div class="top-right">
-        <input type="text" placeholder="Search..." />
-        <button class="btn bordr border-1 border-white">Search</button>
+    </div>
+  </div>
+</div>
+<!-- TOP BAR END -->
 
-        <div class="lang-switch">
-          <a href="#">বাংলা</a> |
-          <a href="#">English</a>
-        </div>
-      </div>
+    <!-- NAVBAR START -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top">
+  <div class="container">
+
+    <!-- Left : Party Name -->
+    <a class="navbar-brand fw-bold" href="index.html">
+      Party Logo
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler my-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Center Menu -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html" >
+            About Us
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="leadership.html" data-bs-toggle="dropdown">
+            Leadership
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="central_committee.html">Central Committee</a></li>
+            <li><a class="dropdown-item" href="local_committee.html">Local Committee</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="our_activities.html" data-bs-toggle="dropdown">
+            Our Activities
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="ongoing_programm.html">Ongoing Programs</a></li>
+            <li><a class="dropdown-item" href="campaign.html">Campaigns</a></li>
+            <li><a class="dropdown-item" href="events.html">Events</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="our_service.html" data-bs-toggle="dropdown">
+            Our Service
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="public_support.html">Public Support</a></li>
+            <li><a class="dropdown-item" href="legel_aid.html">Legal Aid</a></li>
+            <li><a class="dropdown-item" href="volunteer.html">Volunteer Program</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="complain.html">Complain</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="gallery.html">Gallery</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="notice.html">Notice</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="join_us.html" data-bs-toggle="dropdown">
+            Join Us
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="membership_form.html">Membership Form</a></li>
+            <li><a class="dropdown-item" href="volunteer_registration.html">Volunteer Registration</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+      </ul>
+
     </div>
 
-    <!-- NAVBAR SECTION -->
-        <header class="bg-success">
-        <nav class="navbar">
-                <div class="logo">
-                    <a href="index.html">Party Logo</a>
-                </div>
-                <div class="menu-toggle" id="menu-toggle">
-                    ☰
-                </div>
-                <ul class="menu" id="menu">
-                    <li><a href="index.html">Home</a>
-                        <!-- <ul class="submenu">
-                            <li><a href="#">Welcome Message</a></li>
-                            <li><a href="#">Latest Updates</a></li>
-                        </ul> -->
-                    </li>
+    <!-- Right Buttons -->
+    <div class="d-flex gap-2 my-2">
 
-                    <li><a href="about.html">About</a>
-                        <ul class="submenu">
-                            <!-- <li><a href="#">Party History</a></li> -->
-                            <!-- <li><a href="i">Ideology & Vision</a></li>
-                            <li><a href="#">Constitution</a></li> -->
-                        </ul>
-                    </li>
+      <a href="#" class="btn btn-outline-light btn-sm">
+        Login
+      </a>
 
-                    <li><a href="leadership.html">Leadership</a>
-                        <ul class="submenu">
-                            <!-- <li><a href="#">Chairman / President</a></li> -->
-                            <li><a href="central_committee.html">Central Committee</a></li>
-                            <li><a href="local_committee.html">Local Committee</a></li>
-                        </ul>
-                    </li>
+      <a href="#" class="btn btn-light btn-sm">
+        Sign Up
+      </a>
 
-                    <li><a href="our_activities.html">Our Activities</a>
-                        <ul class="submenu">
-                            <li><a href="ongoing_programm.html">Ongoing Programs</a></li>
-                            <li><a href="campaign.html">Campaigns</a></li>
-                            <li><a href="events.html">Events</a></li>
-                        </ul>
-                    </li>
+    </div>
 
-                    <li><a href="our_service.html">Our Service</a>
-                        <ul class="submenu">
-                            <li><a href="public_support.html">Public Support</a></li>
-                            <li><a href="legel_aid.html">Legal Aid</a></li>
-                            <li><a href="volunteer.html">Volunteer Program</a></li>
-                        </ul>
-                    </li>
+  </div>
+</nav>
+<!-- NAVBAR END -->
 
-                    <li><a href="complain.html">Complain</a>
-                        <!-- <ul class="submenu">
-                            <li><a href="#">Report Misconduct</a></li>
-                            <li><a href="#">Report Local Problem</a></li>
-                            <li><a href="#">Submit Complaint</a></li>
-                            <li><a href="#">Track Complaint</a></li>
-                        </ul> -->
-                    </li>
-
-                    <li><a href="gallery.html">Gallery</a></li>
-
-                    <li><a href="notice.html">Notice</a></li>
-
-                    <li><a href="join_us.html">Join Us</a>
-                        <ul class="submenu">
-                            <li><a href="membership_form.html">Membership Form</a></li>
-                            <li><a href="volunteer_registration.html">Volunteer Registration</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="contact.html">Contact</a></li>
-                    
-
-                </ul>
-        </nav>
-    </header>
-
-
-
-    
 
 
 
