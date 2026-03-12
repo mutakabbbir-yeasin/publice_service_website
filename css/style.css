@@ -137,10 +137,11 @@
     list-style:none;
     display:flex;
     margin-left: auto;
+    padding-top: 13px;
 }
 
 .menu li{
-    position:relative;
+    position: relative;
 }
 
 .menu li a{
@@ -338,6 +339,46 @@
     text-decoration: none;
     color: white;
 }
+
+
+/* ABOUT US PAGE START*/
+
+body{
+    background:#f8f9fa;
+}
+
+.section-title{
+    font-weight:700;
+    margin-bottom:40px;
+}
+
+.about-section{
+    padding:80px 0;
+}
+
+.about-img{
+    border-radius:10px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.card-custom{
+    border:none;
+    border-radius:10px;
+    transition:.3s;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.card-custom:hover{
+    transform:translateY(-5px);
+}
+
+.highlight{
+    color:#006400;
+    font-weight:600;
+}
+
+/* ABOUT US PAGE END*/
+
 
 
 
