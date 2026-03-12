@@ -87,7 +87,7 @@
 }
 
 
-@media(max-width:768px){
+@Gallery(max-width:768px){
 
     .top-bar{
         flex-direction:column;
@@ -184,7 +184,7 @@
     color:white;
     cursor:pointer;
 }
-@media(max-width:992px){
+@Gallery(max-width:992px){
 
     .menu{
         position:absolute;
@@ -382,7 +382,7 @@ body{
 
 
 
-@media only screen and (max-width: 600px) {
+@Gallery only screen and (max-width: 600px) {
     .footer_title_padding {
         padding-left: 100px;
     }
