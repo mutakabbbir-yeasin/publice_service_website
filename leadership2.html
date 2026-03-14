@@ -1,0 +1,269 @@
+<!-- PAGE HEADER -->
+
+<section class="page-header">
+<h1>Party Leadership</h1>
+<p>Meet the leaders working for people</p>
+</section>
+
+
+
+<!-- SEARCH + FILTER -->
+
+<section class="py-4 bg-light">
+
+<div class="container text-center">
+
+<input type="text" id="searchLeader" class="form-control w-50 mx-auto mb-3" placeholder="Search leader by name">
+
+<div>
+
+<button class="btn btn-success filter-btn" onclick="filterLeader('all')">All</button>
+
+<button class="btn btn-outline-success filter-btn" onclick="filterLeader('central')">Central Committee</button>
+
+<button class="btn btn-outline-success filter-btn" onclick="filterLeader('district')">District Committee</button>
+
+<button class="btn btn-outline-success filter-btn" onclick="filterLeader('student')">Student Wing</button>
+
+<button class="btn btn-outline-success filter-btn" onclick="filterLeader('youth')">Youth Wing</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- LEADERS GRID -->
+
+<section class="py-5">
+
+<div class="container">
+
+<div class="row g-4" id="leaderContainer">
+
+<!-- Leader 1 -->
+
+<div class="col-lg-3 col-md-4 col-sm-6 leader-item central">
+
+<div class="card leader-card" data-bs-toggle="modal" data-bs-target="#leaderModal"
+onclick="showLeader('Tarique Rahman','Acting Chairman','images/tarek_rahman.jpg','Acting Chairman of BNP leading the party with democratic vision.')">
+
+<img src="images/tarek_rahman.jpg" class="card-img-top leader-img">
+
+<div class="card-body text-center">
+
+<h6 class="leader-name">Tarique Rahman</h6>
+
+<p class="text-muted small">Acting Chairman</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- Leader 2 -->
+
+<div class="col-lg-3 col-md-4 col-sm-6 leader-item central">
+
+<div class="card leader-card" data-bs-toggle="modal" data-bs-target="#leaderModal"
+onclick="showLeader('Secretary General','BNP','images/leader2.jpg','Responsible for managing party administration.')">
+
+<img src="images/leader2.jpg" class="card-img-top leader-img">
+
+<div class="card-body text-center">
+
+<h6 class="leader-name">Secretary General</h6>
+
+<p class="text-muted small">Central Committee</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- Leader 3 -->
+
+<div class="col-lg-3 col-md-4 col-sm-6 leader-item district">
+
+<div class="card leader-card" data-bs-toggle="modal" data-bs-target="#leaderModal"
+onclick="showLeader('District President','Dhaka','images/leader3.jpg','Leading district political activities.')">
+
+<img src="images/leader3.jpg" class="card-img-top leader-img">
+
+<div class="card-body text-center">
+
+<h6 class="leader-name">District President</h6>
+
+<p class="text-muted small">District Committee</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- Leader 4 -->
+
+<div class="col-lg-3 col-md-4 col-sm-6 leader-item youth">
+
+<div class="card leader-card" data-bs-toggle="modal" data-bs-target="#leaderModal"
+onclick="showLeader('Youth Leader','Youth Wing','images/leader4.jpg','Youth wing organizer working with young members.')">
+
+<img src="images/leader4.jpg" class="card-img-top leader-img">
+
+<div class="card-body text-center">
+
+<h6 class="leader-name">Youth Leader</h6>
+
+<p class="text-muted small">Youth Wing</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- LEADER MODAL -->
+
+<div class="modal fade" id="leaderModal">
+
+<div class="modal-dialog modal-dialog-centered">
+
+<div class="modal-content">
+
+<div class="modal-body text-center p-4">
+
+<img id="modalImg" class="img-fluid rounded mb-3" style="max-height:250px">
+
+<h4 id="modalName"></h4>
+
+<h6 id="modalTitle" class="text-success"></h6>
+
+<p id="modalDesc"></p>
+
+<button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<script>
+    
+/* FILTER SYSTEM */
+
+function filterLeader(type){
+
+let leaders=document.querySelectorAll('.leader-item');
+
+leaders.forEach(el=>{
+
+if(type==='all'){
+el.style.display='block';
+}
+else if(el.classList.contains(type)){
+el.style.display='block';
+}
+else{
+el.style.display='none';
+}
+
+});
+
+}
+
+
+/* MODAL PROFILE */
+
+function showLeader(name,title,img,desc){
+
+document.getElementById('modalName').innerText=name;
+
+document.getElementById('modalTitle').innerText=title;
+
+document.getElementById('modalDesc').innerText=desc;
+
+document.getElementById('modalImg').src=img;
+
+}
+
+
+/* SEARCH LEADER */
+
+document.getElementById('searchLeader').addEventListener('keyup',function(){
+
+let value=this.value.toLowerCase();
+
+let leaders=document.querySelectorAll('.leader-item');
+
+leaders.forEach(el=>{
+
+let name=el.querySelector('.leader-name').innerText.toLowerCase();
+
+if(name.includes(value)){
+el.style.display='block';
+}
+else{
+el.style.display='none';
+}
+
+});
+
+});
+
+</script>
+
+
+<style>
+    .page-header{
+background:#198754;
+color:white;
+padding:70px 0;
+text-align:center;
+}
+
+.leader-card{
+border:none;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+cursor:pointer;
+}
+
+.leader-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.leader-img{
+height:260px;
+object-fit:cover;
+}
+
+.filter-btn{
+margin:5px;
+}
+</style>

@@ -46,3 +46,12 @@ function updateDateTime() {
 }
 updateDateTime();
 setInterval(updateDateTime, 1000);
+
+
+
+// LEADERSHIP PAGE
+
+AOS.init({
+duration:1000,
+once:true
+});
